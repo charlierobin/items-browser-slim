@@ -1,0 +1,39 @@
+{
+    "items": [
+        {
+            "id": "1",
+            "title": "Nice House",
+            "address": "London",
+            "price": 10000,
+            "picture": "nice-house.jpg"
+        },
+        {
+            "id": "2",
+            "title": "Small Cottage",
+            "address": "London",
+            "price": 5000,
+            "picture": "small-cottage.jpg"
+        },
+        {
+            "id": "3",
+            "title": "Magnificent Castle",
+            "address": "London",
+            "price": 20000,
+            "picture": "magnificent-castle.jpg"
+        },
+        {
+            "id": "4",
+            "title": "Two Bedroom Flat",
+            "address": "New York",
+            "price": 8000,
+            "picture": "two-bedroom-flat.jpg"
+        },
+        {
+            "id": "5",
+            "title": "House",
+            "address": "New York",
+            "price": 6000,
+            "picture": "house.jpg"
+        }
+    ]
+}
