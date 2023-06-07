@@ -88,7 +88,8 @@
         // itemsbrowser.getTemplateFromHeaderScriptWithSelector("#template");
         itemsbrowser.getTemplateFromBodyHTMLWithSelector("#template2");
 
-        itemsbrowser.getData("/data.json");
+        // itemsbrowser.getData("/data.json");
+        itemsbrowser.getData("/data.tsv");
 
         $("#flats").on("click", function () {
             itemsbrowser.refresh();

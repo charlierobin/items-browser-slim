@@ -1,0 +1,8 @@
+id	title	address	price	picture
+number	string	string	number	string
+1	Nice House	London	10000	nice-house.jpg
+2	Small Cottage	London	5000	small-cottage.jpg
+3	Magnificent Castle	London	20000	magnificent-castle.jpg
+4	Two Bedroom Flat	New York	8000	two-bedroom-flat.jpg
+5	House	New York	6000	house.jpg
+6	Hobbit Hole	Hobbiton	30000	hobbit-hole.jpg

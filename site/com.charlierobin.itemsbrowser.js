@@ -94,11 +94,51 @@ if (window.com.charlierobin.itemsbrowser === undefined) {
         $("#listing").children().remove();
     };
 
+    me.convertTabSeparatedValuesToObject = function (tsvData) {
+
+        const rows = tsvData.split("\n");
+
+        const fieldNames = rows[0].trim().split("\t");
+        const fieldTypes = rows[1].trim().split("\t");
+
+        const items = [];
+
+        for (i = 2; i < rows.length; i++) {
+
+            const thisRowData = rows[i].trim().split("\t");
+
+            const thisRowObject = {};
+
+            for (j = 0; j < thisRowData.length; j++) {
+
+                var value = thisRowData[j];
+
+                if (fieldTypes[j] === "number") {
+                    value = parseFloat(value);
+                }
+
+                thisRowObject[fieldNames[j]] = value;
+            }
+
+            items.push(thisRowObject);
+        }
+
+        return items;
+    };
+
     me.getData = function (url) {
 
         axios.get(url)
 
             .then(function (response) {
+
+                if (url.includes("tsv")) {
+
+                    const transformedData = me.convertTabSeparatedValuesToObject(response.data);
+
+                    response.data = {};
+                    response.data.items = transformedData;
+                }
 
                 const data = response.data;
 
